@@ -1,0 +1,907 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "failed": false,
+        "gas": "0x311ae",
+        "returnValue": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063874f33a114602d575b600080fd5b60336035565b005b6000805460429060016046565b5050565b80820180821115606657634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220dc05b69ca32bbf0b23ab2378ded66dffc0db016b13b8a4c0054713df1408642564736f6c63430008130033",
+        "structLogs": [
+            {
+                "depth": 1,
+                "gas": 203466,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 0,
+                "stack": []
+            },
+            {
+                "depth": 1,
+                "gas": 203463,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 2,
+                "stack": [
+                    "0xa0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203460,
+                "gasCost": 12,
+                "op": "MSTORE",
+                "pc": 4,
+                "stack": [
+                    "0xa0",
+                    "0x40"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203448,
+                "gasCost": 2,
+                "op": "CALLVALUE",
+                "pc": 5,
+                "stack": []
+            },
+            {
+                "depth": 1,
+                "gas": 203446,
+                "gasCost": 3,
+                "op": "DUP1",
+                "pc": 6,
+                "stack": [
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203443,
+                "gasCost": 3,
+                "op": "ISZERO",
+                "pc": 7,
+                "stack": [
+                    "0x0",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203440,
+                "gasCost": 3,
+                "op": "PUSH2",
+                "pc": 8,
+                "stack": [
+                    "0x0",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203437,
+                "gasCost": 10,
+                "op": "JUMPI",
+                "pc": 11,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0x10"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203427,
+                "gasCost": 1,
+                "op": "JUMPDEST",
+                "pc": 16,
+                "stack": [
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203426,
+                "gasCost": 2,
+                "op": "POP",
+                "pc": 17,
+                "stack": [
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203424,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 18,
+                "stack": []
+            },
+            {
+                "depth": 1,
+                "gas": 203421,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 20,
+                "stack": [
+                    "0x19"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203418,
+                "gasCost": 3,
+                "op": "SWAP1",
+                "pc": 22,
+                "stack": [
+                    "0x19",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203415,
+                "gasCost": 3,
+                "op": "DUP2",
+                "pc": 23,
+                "stack": [
+                    "0x0",
+                    "0x19"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 203412,
+                "gasCost": 22100,
+                "op": "SSTORE",
+                "pc": 24,
+                "stack": [
+                    "0x0",
+                    "0x19",
+                    "0x0"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 181312,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 25,
+                "stack": [
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 181309,
+                "gasCost": 3,
+                "op": "DUP1",
+                "pc": 27,
+                "stack": [
+                    "0x0",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 181306,
+                "gasCost": 2100,
+                "op": "SLOAD",
+                "pc": 28,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0x1"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 179206,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 29,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179203,
+                "gasCost": 3,
+                "op": "NOT",
+                "pc": 31,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0x0",
+                    "0xff"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179200,
+                "gasCost": 3,
+                "op": "SWAP1",
+                "pc": 32,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0x0",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179197,
+                "gasCost": 3,
+                "op": "DUP2",
+                "pc": 33,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179194,
+                "gasCost": 3,
+                "op": "AND",
+                "pc": 34,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179191,
+                "gasCost": 3,
+                "op": "DUP3",
+                "pc": 35,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179188,
+                "gasCost": 3,
+                "op": "OR",
+                "pc": 36,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179185,
+                "gasCost": 3,
+                "op": "DUP3",
+                "pc": 37,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 179182,
+                "gasCost": 20000,
+                "op": "SSTORE",
+                "pc": 38,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x1"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000001"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 159182,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 39,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 159179,
+                "gasCost": 3,
+                "op": "DUP1",
+                "pc": 41,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 159176,
+                "gasCost": 2100,
+                "op": "SLOAD",
+                "pc": 42,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2",
+                    "0x2"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002": "0x0000000000000000000000000000000000000000000000000000000000000000"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 157076,
+                "gasCost": 3,
+                "op": "DUP1",
+                "pc": 43,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 157073,
+                "gasCost": 3,
+                "op": "DUP5",
+                "pc": 44,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2",
+                    "0x0",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 157070,
+                "gasCost": 3,
+                "op": "ADD",
+                "pc": 45,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2",
+                    "0x0",
+                    "0x0",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 157067,
+                "gasCost": 3,
+                "op": "SWAP1",
+                "pc": 46,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2",
+                    "0x0",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 157064,
+                "gasCost": 3,
+                "op": "SWAP2",
+                "pc": 47,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x2",
+                    "0x1",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 157061,
+                "gasCost": 20000,
+                "op": "SSTORE",
+                "pc": 48,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0",
+                    "0x1",
+                    "0x2"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002": "0x0000000000000000000000000000000000000000000000000000000000000001"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 137061,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 49,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 137058,
+                "gasCost": 3,
+                "op": "PUSH32",
+                "pc": 51,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0",
+                    "0xde"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 137055,
+                "gasCost": 3,
+                "op": "SWAP1",
+                "pc": 84,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0",
+                    "0xde",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 137052,
+                "gasCost": 3,
+                "op": "SWAP2",
+                "pc": 85,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x0",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace",
+                    "0xde"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 137049,
+                "gasCost": 3,
+                "op": "ADD",
+                "pc": 86,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0xde",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 137046,
+                "gasCost": 22100,
+                "op": "SSTORE",
+                "pc": 87,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0xde",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace": "0x00000000000000000000000000000000000000000000000000000000000000de"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 114946,
+                "gasCost": 3,
+                "op": "SWAP2",
+                "pc": 88,
+                "stack": [
+                    "0x0",
+                    "0x1",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114943,
+                "gasCost": 3,
+                "op": "DUP1",
+                "pc": 89,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114940,
+                "gasCost": 3,
+                "op": "MSTORE",
+                "pc": 90,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x0",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114937,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 91,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114934,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 93,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x3"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114931,
+                "gasCost": 3,
+                "op": "MSTORE",
+                "pc": 95,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x3",
+                    "0x20"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114928,
+                "gasCost": 3,
+                "op": "PUSH32",
+                "pc": 96,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114925,
+                "gasCost": 3,
+                "op": "DUP1",
+                "pc": 129,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 114922,
+                "gasCost": 2100,
+                "op": "SLOAD",
+                "pc": 130,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace": "0x00000000000000000000000000000000000000000000000000000000000000de"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 112822,
+                "gasCost": 3,
+                "op": "SWAP1",
+                "pc": 131,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 112819,
+                "gasCost": 3,
+                "op": "SWAP3",
+                "pc": 132,
+                "stack": [
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+                    "0x1",
+                    "0x0",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 112816,
+                "gasCost": 3,
+                "op": "AND",
+                "pc": 133,
+                "stack": [
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff",
+                    "0x1",
+                    "0x0",
+                    "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 112813,
+                "gasCost": 3,
+                "op": "OR",
+                "pc": 134,
+                "stack": [
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff",
+                    "0x1",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 112810,
+                "gasCost": 3,
+                "op": "SWAP1",
+                "pc": 135,
+                "stack": [
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff",
+                    "0x1"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 112807,
+                "gasCost": 20000,
+                "op": "SSTORE",
+                "pc": 136,
+                "stack": [
+                    "0x1",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff"
+                ],
+                "storage": {
+                    "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000000019",
+                    "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x0000000000000000000000000000000000000000000000000000000000000002": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x3617319a054d772f909f7c479a2cebe5066e836a939412e32403c99029b92eff": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                    "0x405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace": "0x00000000000000000000000000000000000000000000000000000000000000de"
+                }
+            },
+            {
+                "depth": 1,
+                "gas": 92807,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 137,
+                "stack": []
+            },
+            {
+                "depth": 1,
+                "gas": 92804,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 139,
+                "stack": [
+                    "0x7b"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92801,
+                "gasCost": 9,
+                "op": "MSTORE",
+                "pc": 141,
+                "stack": [
+                    "0x7b",
+                    "0x80"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92792,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 142,
+                "stack": []
+            },
+            {
+                "depth": 1,
+                "gas": 92789,
+                "gasCost": 3,
+                "op": "MLOAD",
+                "pc": 144,
+                "stack": [
+                    "0x80"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92786,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 145,
+                "stack": [
+                    "0x7b"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92783,
+                "gasCost": 3,
+                "op": "PUSH2",
+                "pc": 147,
+                "stack": [
+                    "0x7b",
+                    "0xa2"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92780,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 150,
+                "stack": [
+                    "0x7b",
+                    "0xa2",
+                    "0xa3"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92777,
+                "gasCost": 24,
+                "op": "CODECOPY",
+                "pc": 152,
+                "stack": [
+                    "0x7b",
+                    "0xa2",
+                    "0xa3",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92753,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 153,
+                "stack": [
+                    "0x7b"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92750,
+                "gasCost": 2,
+                "op": "POP",
+                "pc": 155,
+                "stack": [
+                    "0x7b",
+                    "0x0"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92748,
+                "gasCost": 2,
+                "op": "POP",
+                "pc": 156,
+                "stack": [
+                    "0x7b"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92746,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 157,
+                "stack": []
+            },
+            {
+                "depth": 1,
+                "gas": 92743,
+                "gasCost": 3,
+                "op": "PUSH1",
+                "pc": 159,
+                "stack": [
+                    "0xa2"
+                ]
+            },
+            {
+                "depth": 1,
+                "gas": 92740,
+                "gasCost": 0,
+                "op": "RETURN",
+                "pc": 161,
+                "stack": [
+                    "0xa2",
+                    "0x0"
+                ]
+            }
+        ]
+    }
+}

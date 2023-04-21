@@ -5,7 +5,6 @@ pragma solidity ^0.8.19;
 
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
-import {console} from "forge-std/Console.sol";
 
 // 3. Interfaces, Libraries, Contracts
 error FundMe__NotOwner();

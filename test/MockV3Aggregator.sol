@@ -10,7 +10,7 @@ pragma solidity ^0.8.0;
  * its answer is unimportant
  */
 contract MockV3Aggregator {
-    uint256 public constant version = 0;
+    uint256 public constant version = 4;
 
     uint8 public decimals;
     int256 public latestAnswer;

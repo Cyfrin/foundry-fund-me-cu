@@ -70,6 +70,14 @@ forge test
 or 
 
 ```
+// Only run test functions matching the specified regex pattern.
+
+forge test --match-test testFunctionName
+```
+
+or
+
+```
 forge test --fork-url $SEPOLIA_RPC_URL
 ```
 

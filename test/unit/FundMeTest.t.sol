@@ -108,7 +108,7 @@ contract FundMeTest is StdCheats, Test {
         ) {
             // we get hoax from stdcheats
             // prank + deal
-            hoax(address(i), SEND_VALUE);
+            hoax(address(i), STARTING_USER_BALANCE);
             fundMe.fund{value: SEND_VALUE}();
         }
 

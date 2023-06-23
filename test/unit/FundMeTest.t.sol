@@ -95,6 +95,9 @@ contract FundMeTest is StdCheats, Test {
             startingFundMeBalance + startingOwnerBalance,
             endingOwnerBalance // + gasUsed
         );
+        
+        vm.expectRevert();
+        fundMe.getFunder(0);
     }
 
     // Can we do our withdraw function a cheaper way?
@@ -128,5 +131,8 @@ contract FundMeTest is StdCheats, Test {
             (numberOfFunders + 1) * SEND_VALUE ==
                 fundMe.getOwner().balance - startingOwnerBalance
         );
+
+        vm.expectRevert();
+        fundMe.getFunder(0);
     }
 }

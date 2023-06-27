@@ -24,20 +24,13 @@ contract HelperConfig is Script {
         }
     }
 
-    function getSepoliaEthConfig()
-        public
-        pure
-        returns (NetworkConfig memory sepoliaNetworkConfig)
-    {
+    function getSepoliaEthConfig() public pure returns (NetworkConfig memory sepoliaNetworkConfig) {
         sepoliaNetworkConfig = NetworkConfig({
             priceFeed: 0x694AA1769357215DE4FAC081bf1f309aDC325306 // ETH / USD
         });
     }
 
-    function getOrCreateAnvilEthConfig()
-        public
-        returns (NetworkConfig memory anvilNetworkConfig)
-    {
+    function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory anvilNetworkConfig) {
         // Check to see if we set an active network config
         if (activeNetworkConfig.priceFeed != address(0)) {
             return activeNetworkConfig;

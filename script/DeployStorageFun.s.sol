@@ -5,7 +5,7 @@ import {Script, console} from "forge-std/Script.sol";
 import {HelperConfig} from "./HelperConfig.s.sol";
 import {FunWithStorage} from "../src/exampleContracts/FunWithStorage.sol";
 
-contract DeployFundMe is Script {
+contract DeployFunWithStorage is Script {
     function run() external returns (FunWithStorage) {
         vm.startBroadcast();
         FunWithStorage funWithStorage = new FunWithStorage();

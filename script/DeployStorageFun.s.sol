@@ -46,5 +46,5 @@ contract DeployFunWithStorage is Script {
      * Go through the JSON and find the storage slot you want
      */
 
-    // You could also replay every transactoin and track the `SSTORE` opcodes... but that's a lot of work
+    // You could also replay every transaction and track the `SSTORE` opcodes... but that's a lot of work
 }

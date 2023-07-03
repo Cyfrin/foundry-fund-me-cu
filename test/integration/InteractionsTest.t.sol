@@ -6,8 +6,8 @@ import {DeployFundMe} from "../../script/DeployFundMe.s.sol";
 import {FundFundMe, WithdrawFundMe} from "../../script/Interactions.s.sol";
 import {FundMe} from "../../src/FundMe.sol";
 import {HelperConfig} from "../../script/HelperConfig.s.sol";
-import {Test, console} from "forge-std/Test.sol";
-import {StdCheats} from "forge-std/StdCheats.sol";
+import {Test, console} from "../../lib/forge-std/src/Test.sol";
+import {StdCheats} from "../../lib/forge-std/src/StdCheats.sol";
 
 contract IntegrationsTest is StdCheats, Test {
     FundMe public fundMe;

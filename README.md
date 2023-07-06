@@ -103,7 +103,7 @@ Optionally, add your `ETHERSCAN_API_KEY` if you want to verify your contract on 
 
 1. Get testnet ETH
 
-Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesnet ETH. You should see the ETH show up in your metamask.
+Head over to [faucets.chain.link](https://faucets.chain.link/) and get some testnet ETH. You should see the ETH show up in your metamask.
 
 3. Deploy
 

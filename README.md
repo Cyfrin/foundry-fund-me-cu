@@ -49,7 +49,7 @@ If you can't or don't want to run and install locally, you can work with this re
 ## Deploy:
 
 ```
-forge script scripts/DeployFundMe.s.sol
+forge script script/DeployFundMe.s.sol
 ```
 
 ## Testing
@@ -125,7 +125,7 @@ cast send <FUNDME_CONTRACT_ADDRESS> "fund()" --value 0.1ether --private-key <PRI
 
 or
 ```
-forge script script/FundFundMe.s.sol --rpc-url sepolia  --private-key $PRIVATE_KEY  --broadcast
+forge script script/Interactions.s.sol --rpc-url sepolia  --private-key $PRIVATE_KEY  --broadcast
 ```
 
 ### Withdraw

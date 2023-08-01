@@ -46,7 +46,7 @@ If you can't or don't want to run and install locally, you can work with this re
 
 # Usage
 
-Deploy:
+## Deploy:
 
 ```
 forge script scripts/DeployFundMe.s.sol

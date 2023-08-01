@@ -49,7 +49,7 @@ If you can't or don't want to run and install locally, you can work with this re
 ## Deploy:
 
 ```
-forge script scripts/DeployFundMe.s.sol
+forge script script/DeployFundMe.s.sol
 ```
 
 ## Testing

@@ -67,22 +67,25 @@ This repo we cover #1 and #3.
 ```
 forge test
 ```
-
-or 
-
-```
-// Only run test functions matching the specified regex pattern.
-
-"forge test -m testFunctionName" is deprecated. Please use 
-
-forge test --match-test testFunctionName
-```
-
 or
 
 ```
 forge test --fork-url $SEPOLIA_RPC_URL
 ```
+
+or 
+
+
+##### Following only run test functions matching the specified regex pattern.
+
+ Note : "```forge test -m testFunctionName```" is deprecated. Please use :
+
+```bash
+forge test --match-test testFunctionName
+or
+forge test --mt testFunctionName
+```
+
 
 ### Test Coverage
 

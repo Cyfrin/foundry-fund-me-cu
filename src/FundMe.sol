@@ -18,8 +18,8 @@ error FundMe__NotOwner();
 contract FundMe {
     // Errors
     error FundMe__NoFundsToWithdraw(uint256 balance);
-    // Type Declarations
 
+    // Type Declarations
     using PriceConverter for uint256;
 
     // State variables
@@ -67,6 +67,8 @@ contract FundMe {
             revert FundMe__NoFundsToWithdraw(address(this).balance);
         }
 
+        // require(address(this).balance > 0);
+
         for (uint256 funderIndex = 0; funderIndex < s_funders.length; funderIndex++) {
             address funder = s_funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
@@ -83,6 +85,8 @@ contract FundMe {
         if (address(this).balance <= 0) {
             revert FundMe__NoFundsToWithdraw(address(this).balance);
         }
+
+        // require(address(this).balance > 0);
 
         address[] memory funders = s_funders;
         // mappings can't be in memory, sorry!

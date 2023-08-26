@@ -119,4 +119,12 @@ contract FundMeTest is StdCheats, Test {
         assert(startingFundMeBalance + startingOwnerBalance == fundMe.getOwner().balance);
         assert((numberOfFunders + 1) * SEND_VALUE == fundMe.getOwner().balance - startingOwnerBalance);
     }
+
+    function testCannotWithdrawZeroBalance() public {
+        vm.startPrank(fundMe.getOwner());
+        vm.expectRevert(abi.encodeWithSelector(FundMe.FundMe__NoFundsToWithdraw.selector, address(fundMe).balance));
+
+        fundMe.withdraw();
+        vm.stopPrank();
+    }
 }

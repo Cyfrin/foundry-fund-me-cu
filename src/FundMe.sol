@@ -16,7 +16,10 @@ error FundMe__NotOwner();
  * @dev This implements price feeds as our library
  */
 contract FundMe {
+    // Errors
+    error FundMe__NoFundsToWithdraw(uint256 balance);
     // Type Declarations
+
     using PriceConverter for uint256;
 
     // State variables
@@ -59,6 +62,11 @@ contract FundMe {
     }
 
     function withdraw() public onlyOwner {
+        // Why to withdraw 0 or no fundings.
+        if (address(this).balance <= 0) {
+            revert FundMe__NoFundsToWithdraw(address(this).balance);
+        }
+
         for (uint256 funderIndex = 0; funderIndex < s_funders.length; funderIndex++) {
             address funder = s_funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
@@ -71,6 +79,11 @@ contract FundMe {
     }
 
     function cheaperWithdraw() public onlyOwner {
+        // Why to withdraw 0 or no fundings.
+        if (address(this).balance <= 0) {
+            revert FundMe__NoFundsToWithdraw(address(this).balance);
+        }
+
         address[] memory funders = s_funders;
         // mappings can't be in memory, sorry!
         for (uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
@@ -83,7 +96,9 @@ contract FundMe {
         require(success);
     }
 
-    /** Getter Functions */
+    /**
+     * Getter Functions
+     */
 
     /**
      * @notice Gets the amount that an address has funded

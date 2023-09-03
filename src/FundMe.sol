@@ -59,9 +59,13 @@ contract FundMe {
     }
 
     function withdraw() public onlyOwner {
-        for (uint256 funderIndex = 0; funderIndex < s_funders.length; funderIndex++) {
+        uint256 funders_length = s_funders.length;
+        for (uint256 funderIndex; funderIndex < funders_length;) {
             address funder = s_funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
+            unchecked{
+                ++funderIndex;
+            }
         }
         s_funders = new address[](0);
         // Transfer vs call vs Send
@@ -73,9 +77,12 @@ contract FundMe {
     function cheaperWithdraw() public onlyOwner {
         address[] memory funders = s_funders;
         // mappings can't be in memory, sorry!
-        for (uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
+        for (uint256 funderIndex; funderIndex < funders.length;) {
             address funder = funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
+            unchecked{
+                ++funderIndex;
+            }
         }
         s_funders = new address[](0);
         // payable(msg.sender).transfer(address(this).balance);

@@ -10,7 +10,7 @@ help:
 	@echo ""
 	@echo "  make fund [ARGS=...]\n    example: make deploy ARGS=\"--network sepolia\""
 
-all: clean remove install update build
+all: remove install update build
 
 # Clean the repo
 clean  :; forge clean

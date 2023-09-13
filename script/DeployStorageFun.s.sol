@@ -2,7 +2,6 @@
 pragma solidity ^0.8.19;
 
 import {Script, console} from "forge-std/Script.sol";
-import {HelperConfig} from "./HelperConfig.s.sol";
 import {FunWithStorage} from "../src/exampleContracts/FunWithStorage.sol";
 
 contract DeployFunWithStorage is Script {
@@ -18,7 +17,7 @@ contract DeployFunWithStorage is Script {
     function printStorageData(address contractAddress) public view {
         for (uint256 i = 0; i < 10; i++) {
             bytes32 value = vm.load(contractAddress, bytes32(i));
-            console.log("Vale at location", i, ":");
+            console.log("Vaule at location", i, ":");
             console.logBytes32(value);
         }
     }

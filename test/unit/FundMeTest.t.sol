@@ -98,7 +98,7 @@ contract FundMeTest is StdCheats, Test {
     }
 
     // Can we do our withdraw function a cheaper way?
-    function testWithDrawFromMultipleFunders() public funded {
+    function testWithdrawFromMultipleFunders() public funded {
         uint160 numberOfFunders = 10;
         uint160 startingFunderIndex = 2;
         for (uint160 i = startingFunderIndex; i < numberOfFunders + startingFunderIndex; i++) {

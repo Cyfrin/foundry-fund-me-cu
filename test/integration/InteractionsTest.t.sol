@@ -9,7 +9,7 @@ import {HelperConfig} from "../../script/HelperConfig.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {StdCheats} from "forge-std/StdCheats.sol";
 
-contract IntegrationsTest is StdCheats, Test {
+contract InteractionsTest is StdCheats, Test {
     FundMe public fundMe;
     HelperConfig public helperConfig;
 

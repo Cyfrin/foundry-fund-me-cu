@@ -8,7 +8,7 @@ help:
 	@echo "Usage:"
 	@echo "  make deploy [ARGS=...]\n    example: make deploy ARGS=\"--network sepolia\""
 	@echo ""
-	@echo "  make fund [ARGS=...]\n    example: make deploy ARGS=\"--network sepolia\""
+	@echo "  make fund [ARGS=...]\n    example: make fund ARGS=\"--network sepolia\""
 
 all: clean remove install update build
 

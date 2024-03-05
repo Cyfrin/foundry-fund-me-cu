@@ -42,7 +42,7 @@ endif
 deploy:
 	@forge script script/DeployFundMe.s.sol:DeployFundMe $(NETWORK_ARGS)
 
-// For deploying Interactions.s.sol:FundFundMe as well as for Interactions.s.sol:WithdrawFundMe we have to include a sender's address `--sender <ADDRESS>`
+# For deploying Interactions.s.sol:FundFundMe as well as for Interactions.s.sol:WithdrawFundMe we have to include a sender's address `--sender <ADDRESS>`
 SENDER_ADDRESS := <sender's address> 
 
 fund:

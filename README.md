@@ -10,7 +10,7 @@ This is a section of the Cyfrin Solidity Course.
   - [Quickstart](#quickstart)
     - [Optional Gitpod](#optional-gitpod)
 - [Usage](#usage)
-  - [Deploy:](#deploy)
+  - [Deploy](#deploy)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
@@ -47,7 +47,7 @@ If you can't or don't want to run and install locally, you can work with this re
 
 # Usage
 
-## Deploy:
+## Deploy
 
 ```
 forge script script/DeployFundMe.s.sol

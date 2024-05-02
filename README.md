@@ -10,6 +10,7 @@ This is a section of the Cyfrin Solidity Course.
   - [Quickstart](#quickstart)
     - [Optional Gitpod](#optional-gitpod)
 - [Usage](#usage)
+  - [Deploy:](#deploy)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
@@ -103,7 +104,7 @@ You'll want to set your `SEPOLIA_RPC_URL` and `PRIVATE_KEY` as environment varia
 
 Optionally, add your `ETHERSCAN_API_KEY` if you want to verify your contract on [Etherscan](https://etherscan.io/).
 
-1. Get testnet ETH
+2. Get testnet ETH
 
 Head over to [faucets.chain.link](https://faucets.chain.link/) and get some testnet ETH. You should see the ETH show up in your metamask.
 

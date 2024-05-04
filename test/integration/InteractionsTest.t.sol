@@ -30,12 +30,21 @@ contract InteractionsTest is StdCheats, Test {
     }
 
     function testUserCanFundAndOwnerWithdraw() public {
-        FundFundMe fundFundMe = new FundFundMe();
-        fundFundMe.fundFundMe(address(fundMe));
+        uint256 preUserBalance = address(USER).balance;
+        uint256 preOwnerBalance = address(fundMe.getOwner()).balance;
+
+        // Using vm.prank to simulate funding from the USER address
+        vm.prank(USER);
+        fundMe.fund{value: SEND_VALUE}();
 
         WithdrawFundMe withdrawFundMe = new WithdrawFundMe();
         withdrawFundMe.withdrawFundMe(address(fundMe));
 
+        uint256 afterUserBalance = address(USER).balance;
+        uint256 afterOwnerBalance = address(fundMe.getOwner()).balance;
+
         assert(address(fundMe).balance == 0);
+        assertEq(afterUserBalance + SEND_VALUE, preUserBalance);
+        assertEq(preOwnerBalance + SEND_VALUE, afterOwnerBalance);
     }
 }

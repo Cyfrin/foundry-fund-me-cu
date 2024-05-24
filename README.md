@@ -16,6 +16,7 @@ This is a section of the Cyfrin Solidity Course.
   - [Local zkSync](#local-zksync)
     - [(Additional) Requirements](#additional-requirements)
     - [Setup local zkSync node](#setup-local-zksync-node)
+    - [Deploy to local zkSync node](#deploy-to-local-zksync-node)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Scripts](#scripts)
     - [Withdraw](#withdraw)
@@ -125,7 +126,7 @@ npx zksync-cli dev config
 And select: `In memory node` and do not select any additional modules.
 
 Then run:
-```
+```bash
 npx zksync-cli dev start
 ```
 
@@ -138,7 +139,13 @@ In memory node started v0.1.0-alpha.22:
   - Rich accounts: https://era.zksync.io/docs/tools/testing/era-test-node.html#use-pre-configured-rich-wallets
 ```
 
-This will set up a docker daemon of a zksync node.
+### Deploy to local zkSync node
+
+```bash
+make deploy-zk
+```
+
+This will deploy a mock price feed and a fund me contract to the zkSync node.
 
 # Deployment to a testnet or mainnet
 

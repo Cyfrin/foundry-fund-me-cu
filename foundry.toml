@@ -2,8 +2,9 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
-remappings = ['@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/']
-ffi = true
+remappings = [
+    '@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/',
+]
 fs_permissions = [{ access = "read", path = "./broadcast" }]
 
 [etherscan]
@@ -12,5 +13,6 @@ sepolia = { key = "${ETHERSCAN_API_KEY}" }
 
 [rpc_endpoints]
 sepolia = "${SEPOLIA_RPC_URL}"
+zksync-local = "http://127.0.0.1:8011"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

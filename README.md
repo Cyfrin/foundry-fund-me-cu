@@ -13,6 +13,9 @@ This is a section of the Cyfrin Solidity Course.
   - [Deploy](#deploy)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
+  - [Local zkSync](#local-zksync)
+    - [(Additional) Requirements](#additional-requirements)
+    - [Setup local zkSync node](#setup-local-zksync-node)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Scripts](#scripts)
     - [Withdraw](#withdraw)
@@ -91,6 +94,51 @@ forge test --fork-url $SEPOLIA_RPC_URL
 forge coverage
 ```
 
+## Local zkSync 
+
+The instructions here will allow you to work with this repo on zkSync.
+
+### (Additional) Requirements 
+
+In addition to the requirements above, you'll need:
+- [foundry-zksync](https://github.com/matter-labs/foundry-zksync)
+  - You'll know you did it right if you can run `forge --version` and you see a response like `forge 0.0.2 (816e00b 2023-03-16T00:05:26.396218Z)`. 
+- [npx & npm](https://docs.npmjs.com/cli/v10/commands/npm-install)
+  - You'll know you did it right if you can run `npm --version` and you see a response like `7.24.0` and `npx --version` and you see a response like `8.1.0`.
+- [docker](https://docs.docker.com/engine/install/)
+  - You'll know you did it right if you can run `docker --version` and you see a response like `Docker version 20.10.7, build f0df350`.
+  - Then, you'll want the daemon running, you'll know it's running if you can run `docker --info` and in the output you'll see something like the following to know it's running:
+```bash
+Client:
+ Context:    default
+ Debug Mode: false
+```
+
+### Setup local zkSync node 
+
+Run the following:
+
+```bash
+npx zksync-cli dev config
+```
+
+And select: `In memory node` and do not select any additional modules.
+
+Then run:
+```
+npx zksync-cli dev start
+```
+
+And you'll get an output like:
+```
+In memory node started v0.1.0-alpha.22:
+ - zkSync Node (L2):
+  - Chain ID: 260
+  - RPC URL: http://127.0.0.1:8011
+  - Rich accounts: https://era.zksync.io/docs/tools/testing/era-test-node.html#use-pre-configured-rich-wallets
+```
+
+This will set up a docker daemon of a zksync node.
 
 # Deployment to a testnet or mainnet
 

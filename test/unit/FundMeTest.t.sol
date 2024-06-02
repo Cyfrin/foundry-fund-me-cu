@@ -7,10 +7,10 @@ import {FundMe} from "../../src/FundMe.sol";
 import {HelperConfig, CodeConstants} from "../../script/HelperConfig.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {StdCheats} from "forge-std/StdCheats.sol";
-import {Base_Test} from "../Base_Test.t.sol";
+import {ZkSyncChainChecker} from "lib/foundry-devops/src/ZkSyncChainChecker.sol";
 import {MockV3Aggregator} from "../mock/MockV3Aggregator.sol";
 
-contract FundMeTest is Base_Test, CodeConstants, StdCheats, Test {
+contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
     FundMe public fundMe;
     HelperConfig public helperConfig;
 

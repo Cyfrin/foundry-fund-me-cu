@@ -8,9 +8,9 @@ import {FundMe} from "../../src/FundMe.sol";
 import {HelperConfig} from "../../script/HelperConfig.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {StdCheats} from "forge-std/StdCheats.sol";
-import {Base_Test} from "../Base_Test.t.sol";
+import {ZkSyncChainChecker} from "lib/foundry-devops/src/ZkSyncChainChecker.sol";
 
-contract InteractionsTest is Base_Test, StdCheats, Test {
+contract InteractionsTest is ZkSyncChainChecker, StdCheats, Test {
     FundMe public fundMe;
     HelperConfig public helperConfig;
 

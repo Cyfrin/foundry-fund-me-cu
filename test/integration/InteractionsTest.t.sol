@@ -8,8 +8,9 @@ import {FundMe} from "../../src/FundMe.sol";
 import {HelperConfig} from "../../script/HelperConfig.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {StdCheats} from "forge-std/StdCheats.sol";
+import {Base_Test} from "../Base_Test.t.sol";
 
-contract InteractionsTest is StdCheats, Test {
+contract InteractionsTest is Base_Test, StdCheats, Test {
     FundMe public fundMe;
     HelperConfig public helperConfig;
 
@@ -23,13 +24,18 @@ contract InteractionsTest is StdCheats, Test {
     // uint256 public constant SEND_VALUE = 1_000_000_000_000_000_000;
     // uint256 public constant SEND_VALUE = 1000000000000000000;
 
-    function setUp() external {
-        DeployFundMe deployer = new DeployFundMe();
-        (fundMe, helperConfig) = deployer.run();
+    function setUp() external skipZkSync {
+        if (!isZkSyncChain()) {
+            DeployFundMe deployer = new DeployFundMe();
+            (fundMe, helperConfig) = deployer.deployFundMe();
+        } else {
+            helperConfig = new HelperConfig();
+            fundMe = new FundMe(helperConfig.activeNetworkConfig());
+        }
         vm.deal(USER, STARTING_USER_BALANCE);
     }
 
-    function testUserCanFundAndOwnerWithdraw() public {
+    function testUserCanFundAndOwnerWithdraw() public skipZkSync {
         uint256 preUserBalance = address(USER).balance;
         uint256 preOwnerBalance = address(fundMe.getOwner()).balance;
 

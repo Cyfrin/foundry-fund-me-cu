@@ -30,7 +30,7 @@ contract InteractionsTest is Base_Test, StdCheats, Test {
             (fundMe, helperConfig) = deployer.deployFundMe();
         } else {
             helperConfig = new HelperConfig();
-            fundMe = new FundMe(helperConfig.activeNetworkConfig());
+            fundMe = new FundMe(helperConfig.getConfigByChainId(block.chainid).priceFeed);
         }
         vm.deal(USER, STARTING_USER_BALANCE);
     }

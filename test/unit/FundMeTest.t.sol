@@ -38,7 +38,7 @@ contract FundMeTest is Base_Test, CodeConstants, StdCheats, Test {
     function testPriceFeedSetCorrectly() public skipZkSync {
         address retreivedPriceFeed = address(fundMe.getPriceFeed());
         // (address expectedPriceFeed) = helperConfig.activeNetworkConfig();
-        address expectedPriceFeed = helperConfig.activeNetworkConfig();
+        address expectedPriceFeed = helperConfig.getConfigByChainId(block.chainid).priceFeed;
         assertEq(retreivedPriceFeed, expectedPriceFeed);
     }
 

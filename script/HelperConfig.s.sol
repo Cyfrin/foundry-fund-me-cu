@@ -36,8 +36,6 @@ contract HelperConfig is CodeConstants, Script {
     NetworkConfig public localNetworkConfig;
     mapping(uint256 chainId => NetworkConfig) public networkConfigs;
 
-    event HelperConfig__CreatedMockPriceFeed(address priceFeed);
-
     /*//////////////////////////////////////////////////////////////
                                FUNCTIONS
     //////////////////////////////////////////////////////////////*/

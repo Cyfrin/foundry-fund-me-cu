@@ -40,7 +40,7 @@ This is a section of the Cyfrin Solidity Course.
 ```
 git clone https://github.com/Cyfrin/foundry-fund-me-cu
 cd foundry-fund-me-cu
-forge build
+make
 ```
 
 ### Optional Gitpod

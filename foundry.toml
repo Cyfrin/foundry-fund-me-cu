@@ -6,6 +6,7 @@ remappings = [
     '@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/',
 ]
 fs_permissions = [{ access = "read", path = "./broadcast" }]
+solc = "0.8.19"
 
 [etherscan]
 mainnet = { key = "${ETHERSCAN_API_KEY}" }
@@ -15,4 +16,4 @@ sepolia = { key = "${ETHERSCAN_API_KEY}" }
 sepolia = "${SEPOLIA_RPC_URL}"
 zksync-local = "http://127.0.0.1:8011"
 
-# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

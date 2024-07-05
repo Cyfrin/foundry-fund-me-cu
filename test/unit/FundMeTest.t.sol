@@ -42,12 +42,12 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         assertEq(retreivedPriceFeed, expectedPriceFeed);
     }
 
-    function testFundFailsWithoutEnoughETH() public {
+    function testFundFailsWithoutEnoughETH() public skipZkSync{
         vm.expectRevert();
         fundMe.fund();
     }
 
-    function testFundUpdatesFundedDataStructure() public {
+    function testFundUpdatesFundedDataStructure() public skipZkSync{
         vm.startPrank(USER);
         fundMe.fund{value: SEND_VALUE}();
         vm.stopPrank();
@@ -56,7 +56,7 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         assertEq(amountFunded, SEND_VALUE);
     }
 
-    function testAddsFunderToArrayOfFunders() public {
+    function testAddsFunderToArrayOfFunders() public skipZkSync{
         vm.startPrank(USER);
         fundMe.fund{value: SEND_VALUE}();
         vm.stopPrank();
@@ -74,13 +74,13 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         _;
     }
 
-    function testOnlyOwnerCanWithdraw() public funded {
+    function testOnlyOwnerCanWithdraw() public funded skipZkSync{
         vm.expectRevert();
         vm.prank(address(3)); // Not the owner
         fundMe.withdraw();
     }
 
-    function testWithdrawFromASingleFunder() public funded {
+    function testWithdrawFromASingleFunder() public funded skipZkSync{
         // Arrange
         uint256 startingFundMeBalance = address(fundMe).balance;
         uint256 startingOwnerBalance = fundMe.getOwner().balance;
@@ -106,7 +106,7 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
     }
 
     // Can we do our withdraw function a cheaper way?
-    function testWithdrawFromMultipleFunders() public funded {
+    function testWithdrawFromMultipleFunders() public funded skipZkSync{
         uint160 numberOfFunders = 10;
         uint160 startingFunderIndex = 2;
         for (uint160 i = startingFunderIndex; i < numberOfFunders + startingFunderIndex; i++) {

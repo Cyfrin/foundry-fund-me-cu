@@ -22,6 +22,9 @@ This is a section of the Cyfrin Solidity Course.
     - [Withdraw](#withdraw)
   - [Estimate gas](#estimate-gas)
 - [Formatting](#formatting)
+- [Additional Info:](#additional-info)
+  - [Let's talk about what "Official" means](#lets-talk-about-what-official-means)
+  - [Summary](#summary)
 - [Thank you!](#thank-you)
 
 
@@ -210,6 +213,23 @@ To run code formatting:
 forge fmt
 ```
 
+# Additional Info:
+Some users were having a confusion that whether Chainlink-brownie-contracts is an official Chainlink repository or not. Here is the info.
+Chainlink-brownie-contracts is an official repo. The repository is owned and maintained by the chainlink team for this very purpose, and gets releases from the proper chainlink release process. You can see it's still the `smartcontractkit` org as well.
+
+https://github.com/smartcontractkit/chainlink-brownie-contracts
+
+## Let's talk about what "Official" means
+The "official" release process is that chainlink deploys it's packages to [npm](https://www.npmjs.com/package/@chainlink/contracts). So technically, even downloading directly from `smartcontractkit/chainlink` is wrong, because it could be using unreleased code.
+
+So, then you have two options:
+
+1. Download from NPM and have your codebase have dependencies foreign to foundry
+2. Download from the chainlink-brownie-contracts repo which already downloads from npm and then packages it nicely for you to use in foundry.
+## Summary
+1. That is an official repo maintained by the same org
+2. It downloads from the official release cycle `chainlink/contracts` use (npm) and packages it nicely for digestion from foundry.
+   
 
 # Thank you!
 
@@ -221,5 +241,6 @@ ETH/Arbitrum/Optimism/Polygon/etc Address: 0x9680201d9c93d65a3603d2088d125e955c7
 [![Patrick Collins YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCn-3f8tw_E1jZvhuHatROwA)
 [![Patrick Collins Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patrickalphac/)
 [![Patrick Collins Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://patrickalphac.medium.com/)
+
 
 <!-- Testing krunchdata https://kdta.io/b6T40  -->

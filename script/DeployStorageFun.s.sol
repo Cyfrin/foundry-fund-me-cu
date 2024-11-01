@@ -17,7 +17,7 @@ contract DeployFunWithStorage is Script {
     function printStorageData(address contractAddress) public view {
         for (uint256 i = 0; i < 10; i++) {
             bytes32 value = vm.load(contractAddress, bytes32(i));
-            console.log("Vaule at location", i, ":");
+            console.log("Value at location", i, ":");
             console.logBytes32(value);
         }
     }

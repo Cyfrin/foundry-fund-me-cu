@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 // 1. Pragma
 pragma solidity 0.8.19;
-// 2. Imports
 
+// 2. Imports
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
 
@@ -58,7 +58,9 @@ contract FundMe {
         s_funders.push(msg.sender);
     }
 
+    // aderyn-ignore-next-line(centralization-risk,unused-public-function,state-change-without-event))
     function withdraw() public onlyOwner {
+        // aderyn-ignore-next-line(storage-array-length-not-cached,costly-loop)
         for (uint256 funderIndex = 0; funderIndex < s_funders.length; funderIndex++) {
             address funder = s_funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;

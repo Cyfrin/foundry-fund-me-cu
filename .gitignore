@@ -19,3 +19,5 @@ docs/
 # zksync
 
 zkout/
+
+.DS_Store

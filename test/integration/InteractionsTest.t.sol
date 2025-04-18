@@ -38,6 +38,7 @@ contract InteractionsTest is ZkSyncChainChecker, StdCheats, Test {
     function testUserCanFundAndOwnerWithdraw() public skipZkSync {
         uint256 preUserBalance = address(USER).balance;
         uint256 preOwnerBalance = address(fundMe.getOwner()).balance;
+        uint256 originalFundMeBalance = address(fundMe).balance;
 
         // Using vm.prank to simulate funding from the USER address
         vm.prank(USER);
@@ -51,6 +52,6 @@ contract InteractionsTest is ZkSyncChainChecker, StdCheats, Test {
 
         assert(address(fundMe).balance == 0);
         assertEq(afterUserBalance + SEND_VALUE, preUserBalance);
-        assertEq(preOwnerBalance + SEND_VALUE, afterOwnerBalance);
+        assertEq(preOwnerBalance + SEND_VALUE + originalFundMeBalance, afterOwnerBalance);
     }
 }

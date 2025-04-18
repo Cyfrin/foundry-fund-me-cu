@@ -18,7 +18,8 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
     uint256 public constant STARTING_USER_BALANCE = 10 ether;
     uint256 public constant GAS_PRICE = 1;
 
-    address public constant USER = address(1);
+    uint160 public constant USER_NUMBER = 50;
+    address public constant USER = address(USER_NUMBER);
 
     // uint256 public constant SEND_VALUE = 1e18;
     // uint256 public constant SEND_VALUE = 1_000_000_000_000_000_000;
@@ -42,12 +43,12 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         assertEq(retreivedPriceFeed, expectedPriceFeed);
     }
 
-    function testFundFailsWithoutEnoughETH() public skipZkSync{
+    function testFundFailsWithoutEnoughETH() public skipZkSync {
         vm.expectRevert();
         fundMe.fund();
     }
 
-    function testFundUpdatesFundedDataStructure() public skipZkSync{
+    function testFundUpdatesFundedDataStructure() public skipZkSync {
         vm.startPrank(USER);
         fundMe.fund{value: SEND_VALUE}();
         vm.stopPrank();
@@ -56,7 +57,7 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         assertEq(amountFunded, SEND_VALUE);
     }
 
-    function testAddsFunderToArrayOfFunders() public skipZkSync{
+    function testAddsFunderToArrayOfFunders() public skipZkSync {
         vm.startPrank(USER);
         fundMe.fund{value: SEND_VALUE}();
         vm.stopPrank();
@@ -74,13 +75,13 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         _;
     }
 
-    function testOnlyOwnerCanWithdraw() public funded skipZkSync{
+    function testOnlyOwnerCanWithdraw() public funded skipZkSync {
         vm.expectRevert();
         vm.prank(address(3)); // Not the owner
         fundMe.withdraw();
     }
 
-    function testWithdrawFromASingleFunder() public funded skipZkSync{
+    function testWithdrawFromASingleFunder() public funded skipZkSync {
         // Arrange
         uint256 startingFundMeBalance = address(fundMe).balance;
         uint256 startingOwnerBalance = fundMe.getOwner().balance;
@@ -106,9 +107,12 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
     }
 
     // Can we do our withdraw function a cheaper way?
-    function testWithdrawFromMultipleFunders() public funded skipZkSync{
+    function testWithdrawFromMultipleFunders() public funded skipZkSync {
         uint160 numberOfFunders = 10;
-        uint160 startingFunderIndex = 2;
+        uint160 startingFunderIndex = 2 + USER_NUMBER;
+
+        uint256 originalFundMeBalance = address(fundMe).balance; // This is for people running forked tests!
+
         for (uint160 i = startingFunderIndex; i < numberOfFunders + startingFunderIndex; i++) {
             // we get hoax from stdcheats
             // prank + deal
@@ -116,7 +120,7 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
             fundMe.fund{value: SEND_VALUE}();
         }
 
-        uint256 startingFundMeBalance = address(fundMe).balance;
+        uint256 startingFundedeBalance = address(fundMe).balance;
         uint256 startingOwnerBalance = fundMe.getOwner().balance;
 
         vm.startPrank(fundMe.getOwner());
@@ -124,7 +128,11 @@ contract FundMeTest is ZkSyncChainChecker, CodeConstants, StdCheats, Test {
         vm.stopPrank();
 
         assert(address(fundMe).balance == 0);
-        assert(startingFundMeBalance + startingOwnerBalance == fundMe.getOwner().balance);
-        assert((numberOfFunders + 1) * SEND_VALUE == fundMe.getOwner().balance - startingOwnerBalance);
+        assert(startingFundedeBalance + startingOwnerBalance == fundMe.getOwner().balance);
+
+        uint256 expectedTotalValueWithdrawn = ((numberOfFunders) * SEND_VALUE) + originalFundMeBalance;
+        uint256 totalValueWithdrawn = fundMe.getOwner().balance - startingOwnerBalance;
+
+        assert(expectedTotalValueWithdrawn == totalValueWithdrawn);
     }
 }
